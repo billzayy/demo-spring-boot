@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "78988ae1-7ea7-427a-a773-f3d926e3c9c5",
+		"name": "Spring API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20475222",
+		"_collection_link": "https://cloudy-rocket-355457.postman.co/workspace/Tuan's-Workspace~88b3845d-4a07-4eff-8734-1bb1f1367626/collection/20475222-78988ae1-7ea7-427a-a773-f3d926e3c9c5?action=share&source=collection_link&creator=20475222"
+	},
+	"item": [
+		{
+			"name": "get student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/student/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"student",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n    \"name\": \"Cam tu\",\n    \"email\": \"phanlecamtu@gmail.com\",\n    \"dob\": \"2003-09-20\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/student/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"student",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete student",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/student/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"student",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update student",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/student/1?name=Bill&email=bill@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"student",
+						"1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Bill"
+						},
+						{
+							"key": "email",
+							"value": "bill@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
