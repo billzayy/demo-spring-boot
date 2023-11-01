@@ -1,5 +1,7 @@
 package com.demoSpring.controllers;
 
+import com.demoSpring.modules.DataStatus;
+import com.demoSpring.modules.ResponseStatus;
 import com.demoSpring.services.StudentService;
 import com.demoSpring.modules.Student;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,17 +20,17 @@ public class StudentController {
     }
 
     @GetMapping("/")
-    public List<Student> getStudents(){
+    public List<DataStatus> getStudents(){
         return studentService.getStudents();
     }
 
     @PostMapping("/")
-    public void registerNewStudent(@RequestBody Student student){
-        studentService.addNewStudent(student);
+    public List<ResponseStatus> registerNewStudent(@RequestBody Student student){
+        return studentService.addNewStudent(student);
     }
     @DeleteMapping(path = "{studentId}")
-    public void deleteStudent(@PathVariable("studentId") Long studentId){
-        studentService.deleteStudent(studentId);
+    public List<ResponseStatus> deleteStudent(@PathVariable("studentId") Long studentId){
+        return studentService.deleteStudent(studentId);
     }
 
     @PutMapping(path = "{studentId}")
